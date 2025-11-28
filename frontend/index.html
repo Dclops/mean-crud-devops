@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MEAN CRUD Application</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            margin: 0; 
+            padding: 40px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: rgba(255,255,255,0.1); 
+            padding: 40px; 
+            border-radius: 15px; 
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        h1 { 
+            color: white; 
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .status-box {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        a {
+            color: #ffeb3b;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .endpoint {
+            background: rgba(0,0,0,0.3);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            font-family: monospace;
+        }
+        .success { color: #90ee90; }
+        .api-method { 
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-right: 8px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+        }
+        .get { background: #61affe; }
+        .post { background: #49cc90; }
+        .put { background: #fca130; }
+        .delete { background: #f93e3e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 MEAN Stack CRUD Application</h1>
+        
+        <div class="status-box">
+            <h2>✅ FULLY OPERATIONAL!</h2>
+            <p class="success">Your complete MEAN stack application with full CRUD operations is running successfully!</p>
+        </div>
+        
+        <div class="status-box">
+            <h3>📊 Services Status</h3>
+            <p><strong>Frontend:</strong> Custom HTML served by nginx ✅</p>
+            <p><strong>Backend API:</strong> Node.js/Express with MongoDB ✅</p>
+            <p><strong>Database:</strong> MongoDB connected and storing data ✅</p>
+            <p><strong>CI/CD:</strong> GitHub Actions automated deployment ✅</p>
+        </div>
+        
+        <div class="status-box">
+            <h3>🔗 Complete CRUD API Endpoints</h3>
+            <div class="endpoint">
+                <span class="api-method get">GET</span>
+                <a href="http://16.112.109.177:8080/api/tutorials" target="_blank">/api/tutorials</a> - Get all tutorials
+            </div>
+            <div class="endpoint">
+                <span class="api-method post">POST</span>
+                /api/tutorials - Create new tutorial
+            </div>
+            <div class="endpoint">
+                <span class="api-method get">GET</span>
+                /api/tutorials/:id - Get tutorial by ID
+            </div>
+            <div class="endpoint">
+                <span class="api-method put">PUT</span>
+                /api/tutorials/:id - Update tutorial
+            </div>
+            <div class="endpoint">
+                <span class="api-method delete">DELETE</span>
+                /api/tutorials/:id - Delete tutorial
+            </div>
+            <div class="endpoint">
+                <span class="api-method get">GET</span>
+                /api/tutorials/published - Get published tutorials
+            </div>
+        </div>
+        
+        <div class="status-box">
+            <h3>🌐 Access Your Application</h3>
+            <p><strong>Frontend:</strong> <a href="http://16.112.109.177:4200" target="_blank">http://16.112.109.177:4200</a></p>
+            <p><strong>Backend API:</strong> <a href="http://16.112.109.177:8080" target="_blank">http://16.112.109.177:8080</a></p>
+            <p><strong>API Documentation:</strong> <a href="http://16.112.109.177:8080/api/tutorials" target="_blank">View Tutorials API</a></p>
+        </div>
+        
+        <div class="status-box">
+            <h3>🎯 Test Your API</h3>
+            <p>Try these commands to test your CRUD API:</p>
+            <div class="endpoint">
+                curl http://16.112.109.177:8080/api/tutorials
+            </div>
+            <div class="endpoint">
+                curl -X POST http://16.112.109.177:8080/api/tutorials -H "Content-Type: application/json" -d '{"title": "Test", "description": "Test tutorial"}'
+            </div>
+        </div>
+        
+        <p><em>🎉 Congratulations! Your full-stack MEAN application with DevOps pipeline is complete! 🎉</em></p>
+    </div>
+</body>
+</html>

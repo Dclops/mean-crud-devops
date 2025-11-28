@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   mongodb:
     image: mongo:6.0
@@ -8,36 +7,26 @@ services:
       MONGO_INITDB_DATABASE: dd_db
     volumes:
       - mongodb_data:/data/db
-    networks:
-      - mean-network
 
   backend:
-    build: ./backend
+    image: mean-backend
     container_name: backend
     restart: unless-stopped
     ports:
       - "8080:8080"
     environment:
-      - MONGODB_URL=mongodb://mongodb:27017/dd_db
+      MONGODB_URL: "mongodb://mongodb:27017/dd_db"
     depends_on:
       - mongodb
-    networks:
-      - mean-network
 
   frontend:
-    build: ./frontend
+    image: mean-frontend-local
     container_name: frontend
     restart: unless-stopped
     ports:
       - "4200:80"
     depends_on:
       - backend
-    networks:
-      - mean-network
 
 volumes:
   mongodb_data:
-
-networks:
-  mean-network:
-    driver: bridge
